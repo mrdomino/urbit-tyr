@@ -27,7 +27,7 @@
             ~
           !!
         ?~  d
-          ?:  =(1 (lent a))
+          ?~  t.a
             a
           !!
         =+  hd=(fra:si i.d --2)
@@ -38,12 +38,11 @@
       --
     ==
 |=  *
-|=  ~
+|=  [foo=(list ,@s) ~]
 ^-  bowl
 :_  ~  :_  ~
 :-  %$
 !>
-=+  foo=(turn (limo ~[1 2 3 4 5 1.024 4 3 6 0 0 0 9 4]) |=(a=@ (new:si & a)))
 =+  a=(iwta foo)
 =+  aa=(iwta a)
 =+  ad=(iwtd a)
