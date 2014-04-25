@@ -62,6 +62,10 @@
     ==
 |=  [est=time *]
 |=  [bud=@p ~]
+=+  ^=  pom
+    =+  nam=(scow %p bud)
+    ?~  nam  !!
+    t.nam
 =.  wak  est
 |-  ^-  bowl
 =<  abet:init
@@ -102,7 +106,7 @@
             :_  ""
             =+  wyt=?:(?=(& -.sad) !=(0 oot) (~(has by tod) p.sad))
             %+  weld
-              ?:(?=(& -.sad) ?:(p.sad "&" "|") (scow %p p.sad))
+              ?:(?=(& -.sad) (weld pom ?:(p.sad "&" "|")) (scow %p p.sad))
             ?:(wyt "... " " ")
         ==
   --
@@ -140,7 +144,7 @@
 ++  priv                                                ::  private message
   |=  [her=@p mes=^mess]
   ^+  +>
-  (show (rend "" (trip (numb her est)) mes))
+  (show (rend (weld pom " ") (trip (numb her est)) mes))
 ::
 ++  said                                                ::  server message
   |=  [her=@p duz=(list zong)]
@@ -151,9 +155,9 @@
       +>
     %-  show
     ?-  -.i.duz
-      %all  (rend ?:(=(%white p.i.duz) "& " "| ") (trip q.q.i.duz) r.i.duz)
-      %new  [%leaf "{(trip q.p.i.duz)} is in the building"]
-      %out  [%leaf "{(trip q.p.i.duz)} has left the building"]
+      %all  (rend (weld pom ?:(=(%white p.i.duz) "& " "| ")) (trip q.q.i.duz) r.i.duz)
+      %new  [%leaf (weld pom " {(trip q.p.i.duz)} is in the building")]
+      %out  [%leaf (weld pom " {(trip q.p.i.duz)} has left the building")]
       %who  [%rose [", " "" ""] (turn p.i.duz |=(a=user [%leaf (trip q.a)]))]
     ==
   ==
